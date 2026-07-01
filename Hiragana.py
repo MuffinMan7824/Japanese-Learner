@@ -1,16 +1,21 @@
 from functools import partial
 import Helper
 import tkinter as tk
-
+import menu
 
 
 def display_Hiragana(window):
+
+    #making widget 
     frame = tk.Frame(window)
+    #giving a normal pack to give grid location
     frame.pack(fill='x')
 
+    #so we dont have to define frame everyime for both the button and text 
     btn = partial(Helper.make_button, frame=frame)
     txt = partial(Helper.make_text, frame=frame)
 
+    #configing the columns
     frame.columnconfigure(0, weight=2)
     frame.columnconfigure(1, weight=2)
     frame.columnconfigure(2, weight=2)
@@ -57,7 +62,6 @@ def display_Hiragana(window):
     #row 2
 
 
-    btn("di",2,1,command=frame.destroy)
     btn("り",2,2)
     btn("み",2,4)
     btn("ひ",2,5)
@@ -97,4 +101,6 @@ def display_Hiragana(window):
     btn("こ",5,9)
     btn("お",5,10)
 
+    #exit 
+    btn("Exit",6,8,columnspan=3,command=lambda: (Helper.wipe_screen(frame),menu.display_menu(window)))
     
