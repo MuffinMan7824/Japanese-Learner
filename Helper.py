@@ -9,9 +9,14 @@ def play_sound(buttonname):
     pygame.mixer.music.load(sound_path)
     pygame.mixer.music.play()
 #making button 
-def make_button(buttontext,row,column,frame,command=None,columnspan=None):
+def make_button(buttontext,row,column,frame,command=None,columnspan=None,Hiraalt=None):
     if command == None:
-        command = lambda: play_sound(buttontext)
+        if Hiraalt == None:
+            command = lambda: play_sound(buttontext)
+        else:
+            command = lambda: play_sound(Hiraalt)
+
+        
     buttonname =tk.Button(frame, text=buttontext,padx=10, pady=10, font=('Arial', 18), command=command)
     buttonname.grid(row=row,column=column,padx=10,pady=10, sticky = tk.W+tk.E, columnspan=columnspan)
 #making text 

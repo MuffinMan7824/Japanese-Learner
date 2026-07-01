@@ -2,6 +2,7 @@ from functools import partial
 import Helper
 import tkinter as tk
 import Hiragana
+import Katakana
 def display_menu(window):
     
      #making widget 
@@ -13,7 +14,14 @@ def display_menu(window):
 
     txt("日本語を学ぶ",500,200,font=60)
     txt("Learn Japanese",500,280,font=30)
+    
     btn("あ",333,380,lambda: (Helper.wipe_screen(frame),Hiragana.display_Hiragana(window)))
     txt("Hiragana",333,435)
+
+    btn("ア",666,380,lambda: (Helper.wipe_screen(frame),Katakana.display_Katakana(window)))
+    txt("Katakana",666,435)
+
+
+
 
     

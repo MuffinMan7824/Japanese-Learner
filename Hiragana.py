@@ -3,6 +3,27 @@ import Helper
 import tkinter as tk
 import menu
 
+Hiragana = ["あ", "い", "う", "え", "お",
+    # K row
+    "か", "き", "く", "け", "こ",
+    # S row
+    "さ", "し", "す", "せ", "そ",
+    # T row
+    "た", "ち", "つ", "て", "と",
+    # N row
+    "な", "に", "ぬ", "ね", "の",
+    # H row
+    "は", "ひ", "ふ", "へ", "ほ",
+    # M row
+    "ま", "み", "む", "め", "も",
+    # Y row
+    "や", "ゆ", "よ",
+    # R row
+    "ら", "り", "る", "れ", "ろ",
+    # W row
+    "わ", "を",
+    # N
+    "ん"]
 
 def display_Hiragana(window):
 
